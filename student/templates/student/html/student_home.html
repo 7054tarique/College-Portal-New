@@ -1,0 +1,40 @@
+{%extends 'student/html/student_base.html'%}
+{%block title%}
+student home page
+{%endblock%}
+
+{%block style%}
+body{
+    background-image: linear-gradient(to right,yellow,rgb(181, 25, 155));
+}
+{%endblock%}
+
+{%block content%}
+
+{%if messages%}
+{%for m in messages%}
+<!-- <h2 class="text-{{m.tags}}">{{m}}</h2> -->
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{m}}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{%endfor%}
+{%endif%}
+
+
+
+
+
+<div class="card" style="width: 300px; margin-left:500px">
+   
+    <div class="card-body">
+      <h5 class="card-title">About you</h5>
+      <p class="card-text">Name:{{user.first_name}}{{user.last_name}}</p>
+      <p class="card-text">Email:{{user.email}}</p>
+
+      
+      <a href="{{'/student/edit_profile/'}}" class="btn btn-primary">Edit profile</a>
+    </div>
+  </div>
+{%endblock%}

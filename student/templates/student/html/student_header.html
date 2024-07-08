@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid" style="background-image:linear-gradient(to right,yellow,rgb(181, 25, 155));">
+      <a class="navbar-brand" href="#">Hello Bca Student &nbsp;&nbsp;{{user.name}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">View</a></li>
+              <li><a class="dropdown-item" href="{{'/student/edit_profile/'}}">Edit</a></li>
+              <li><a class="dropdown-item" href="{{'/student/student_details/'}}">Student Details</a></li>
+            </ul>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="{{'/student/student_logout/'}}">Log Out</a>
+          </li>
+         
+
+        </ul>
+      </div>
+    </div>
+  </nav>
